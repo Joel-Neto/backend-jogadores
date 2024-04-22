@@ -1,0 +1,68 @@
+# teste da API rest de jogadores 
+@baseURL = http://localhost:4000/api/jogadores
+
+# GET - Lista todos os jogadores
+GET {{baseURL}}/?limit=3&skip=0
+Content-Type: application/json
+
+###
+# GET - lista o jogador pelo ID
+GET  {{baseURL}}/id/6626afb6f499335a848f09dd
+Content-Type: application/json
+
+###
+# GET - Lista o jogador pelo nome ou número da camisa 
+GET {{baseURL}}/nome/Aliexpres/11
+Content-Type: application/json
+
+###
+# DELETE - remove o prestador pelo id
+DELETE  {{baseURL}}/6626b141eb70d8548e8da54a
+Content-Type: application/json
+
+###
+# POST - Insere um novo jogaodr
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "numero_camisa": 11,
+  "posicao": "Zegueiro",
+  "time": "Palmeiras",
+  "valor_de_mercado": 2000,
+  "cep": "18111000",
+  "endereco": {
+    "logradouro": "Av. Presidente Kennedy, 321",
+    "bairro": "Centro",
+    "localidade": "Votorantim",
+    "uf": "SP"
+  },
+  "data_inicio_atividade": "2024-04-22"
+}
+
+
+###
+# PUT - altera um prestador já existente.
+PUT {{baseURL}}
+Content-Type: application/json
+
+{
+  "_id": "6626afb6f499335a848f09dd",
+  "nome": "Aliexpress 2.0",
+  "numero_camisa": 7,
+  "posicao": "Meio campo",
+  "time": "Palmeiras",
+  "valor_de_mercado": 1700,
+  "cep": "18111000",
+  "endereco": {
+    "logradouro": "Av. Presidente Kennedy, 321",
+    "bairro": "Centro",
+    "localidade": "Votorantim",
+    "uf": "SP"
+  },
+  "data_inicio_atividade": "2024-04-22"
+}
+
+
+
