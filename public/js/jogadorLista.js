@@ -1,4 +1,4 @@
-const urlBase = "http://localhost:4000/api";
+const urlBase = "https://backend-jogadores-1qxs.vercel.app/";
 
 async function carregaJogadores() {
   const tabela = document.getElementById("dadosTabela");
@@ -59,7 +59,9 @@ async function removeJogador(id) {
 }
 
 function editaJogador(id) {
-  let url = new URL("http://127.0.0.1:57872/public/jogadoresUpdate.html");
+  let url = new URL(
+    "https://backend-jogadores-1qxs.vercel.app/jogadoresUpdate.html"
+  );
   url.searchParams.append("id", id);
   window.location.href = url.href;
 }

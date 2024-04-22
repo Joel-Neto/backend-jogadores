@@ -1,4 +1,4 @@
-const urlBase = "http://localhost:4000/api";
+const urlBase = "https://backend-jogadores-1qxs.vercel.app/";
 let jogadorId = "";
 
 async function carregaPagina() {
@@ -30,7 +30,8 @@ async function carregaPagina() {
     jogadorId = id;
   } else {
     alert("ID não existe na base de dados!");
-    window.location.href = "http://127.0.0.1:57872/public/index.html";
+    window.location.href =
+      "https://backend-jogadores-1qxs.vercel.app/index.html";
   }
 }
 
@@ -95,7 +96,8 @@ async function salvaJogadorAtualizado(jogador) {
         alert("Jogador atualizado com sucesso!");
         //limpamos o formulário
         document.getElementById("formJogadores").reset();
-        window.location.href = "http://127.0.0.1:57872/public/index.html";
+        window.location.href =
+          "https://backend-jogadores-1qxs.vercel.app/index.html";
       } else if (data.errors) {
         const errorMessages = data.errors.map((error) => error.msg).join("\n");
         alert(errorMessages);

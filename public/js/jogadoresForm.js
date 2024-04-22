@@ -1,4 +1,4 @@
-const urlBase = "http://localhost:4000/api";
+const urlBase = "https://backend-jogadores-1qxs.vercel.app/";
 
 document.getElementById("cep").addEventListener("input", async function (ev) {
   const cep = ev.target.value;
